@@ -1,4 +1,10 @@
 def clock(time)
-	'0'
+	hours = time[0...-3].to_i
+	minutes = time[-2..-1].to_i
+
+	if hours >= 12
+		hour_angle = (hours-12) * 30	
+	end	
+	hour_angle
 end
 clock('12:00')
