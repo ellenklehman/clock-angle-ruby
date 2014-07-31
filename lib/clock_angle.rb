@@ -5,6 +5,9 @@ def clock(time)
 	if hours >= 12
 		hour_angle = (hours-12) * 30	
 	end	
+	if hour_angle > 180
+		hour_angle = 360 - hour_angle
+	end
 	hour_angle
 end
 clock('12:00')
