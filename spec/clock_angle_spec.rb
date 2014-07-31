@@ -13,4 +13,8 @@ describe('clock') do
 	it 'returns the smallest angle for a whole hour input' do
 		expect(clock('19:00')).to eq 150
 	end
+
+	it 'returns correct angle for inputs with half hours' do
+		expect(clock('12:30')).to eq 180
+	end
 end
